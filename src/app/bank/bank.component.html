@@ -1,0 +1,34 @@
+
+
+<div class="container">
+  <div class="card">
+      <input [(ngModel)]="searchText" placeholder="Search..Box"          class="advancedSearchTextbox">
+    <div>
+
+        
+      <table  class="table table-dark table-striped">
+       <tr>
+         <td>Ifsc</td>
+         <td>Bank_ID</td>
+         <td>Branch</td>
+         <td>Address</td>
+         <td>City</td>
+         <td>District</td>
+         <td>State</td>
+         <td>Bank_Name</td>
+       </tr>
+             <tr *ngFor="let bank of banks | filter:{bank_id: searchText,bank_name:searchText,ifsc:searchText,city:searchText}; let i=index;" >
+
+      <td> {{bank.ifsc}}</td>
+       <td>{{bank.bank_id}}</td>
+       <td>{{bank.branch}}</td>
+      <td>{{bank.address}}</td>
+      <td>{{bank.city}}</td>
+      <td>{{bank.istrict}}</td>
+      <td>{{bank.state}}</td>
+      <td>{{bank.bank_name}}</td> 
+  </tr>
+</table>
+</div>
+  </div>
+</div>

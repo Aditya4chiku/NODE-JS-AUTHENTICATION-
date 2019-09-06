@@ -1,0 +1,7 @@
+<div>
+  <form>
+    <button  type="button"   (click)="filePicker.click()" >  PickImage</button>
+    <input   [(ngModel)]="fileInput"     type="file" (change)="onImagePicked($event)"  #filePicker >
+  </form>
+  <input type="submit" placeholder="Submit"  value="submi">
+</div>
